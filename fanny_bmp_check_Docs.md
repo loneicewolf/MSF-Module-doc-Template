@@ -80,6 +80,14 @@ Talk about what it does, and how to use it appropriately. If the default value i
 ## Scenarios
 Specific #demo
 
+### Typical Usage Scenario: Pen Test without being Detected
+
+1 thing this could be used as, is (as with the duqu_check) to check, if a target system (that you/your team is going to/will/plan to perform one or more penetration tests on, already is infected by any of those, and it would probably make a nice looking "alert" to malware researchers who runs malwares into sandboxes and vms; (Because it would shortly make the system/vm  more "targeted" if infected even more.
+
+For example and if a VM(for example) is infected with Duqu, Maybe it's not the most optimal 'thing' to infect it with anything (else - in general, at all) By e.g Using metasploit, (because, the system already is infected with Duqu(if we take a Duqu Infected VM/System as an example), Duqu - wich is kinda well known by now, will make the VM (or if it is a real os, which still does happen) more suspected for malware.
+
+### So, short story: the less malicious activity (the less "malware") on a system, the less detection risk is present.
+
 I Will upload a POC video demonstrating this on Windows 10, x64. Sooner or later.
 There's already a XP POC video located here 
  - https://github.com/loneicewolf/fanny.bmp/blob/main/FannyMalware%20POC%20.mp4
