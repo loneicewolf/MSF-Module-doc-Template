@@ -1,6 +1,5 @@
 //MSF Module Documentation template// Remove, add additional and change everything here.
 
-
 #### NOTE this is for my own,  feel free to use it, although it might not be the best for everyone...
 
 Add as much as possible, and be detailed. Do error checking and try to view this from other perspectves. (e.g newbies, experts,)...
